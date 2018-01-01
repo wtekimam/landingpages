@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Landing page no 1</title>
+	<link rel="stylesheet" type="text/css" href="landing_page_style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<h1>This is a header and you are looking at it</h1>
+			<h3>We have whatever you are looking for</h3>
+		</div>
+
+		<div class="features">
+			<div>
+				<h3>1st item on the list</h3>
+				<p>This is the description for the first item on the list</p>
+			</div>
+			<div>
+				<h3>2nd item on the list is here</h3>
+				<p>The second item on the list is pretty cool too</p>
+			</div>
+			<div>
+				<h3>The third item on the list</h3>
+				<p>The third description is a cool item on the list</p>
+			</div>
+		</div>
+
+		<div class="feature2">
+			<div class="tab">
+				<button class="tablinks" onclick="openTab(event, 'tab1')">Feature1</button>
+				<button class="tablinks" onclick="openTab(event, 'tab2')">Feature2</button>
+				<button class="tablinks" onclick="openTab(event, 'tab3')">Feature3</button>
+			</div>
+
+			<div id="tab1" class="tabcontent">
+				<p>This is the place where I learn that we can do tabs without bootstrap</p>	
+			</div>
+			<div id="tab2" class="tabcontent">
+				<p>This is the place where I learn that we can do tabs without bootstrap</p>	
+			</div>
+			<div id="tab3" class="tabcontent">
+				<p>This is the place where I learn that we can do tabs without bootstrap</p>	
+			</div>
+		</div>
+	</div>
+	<script>
+		function openTab(evt, tabNumber) {
+			var i, tabcontent, tablinks;
+			tabcontent = document.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+			tablinks = document.getElementsByClassName("tablinks");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(" active", "");
+			}
+			document.getElementById(tabNumber).style.display = "block";
+			evt.currentTarget.className += " active";
+		}
+	}
+</script>
+</body>
+</html>
